@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Steelrumble Tester | Lincolnsoft</title>
+    <meta name="description" content="So kommst du als Tester ins Steelrumble-Gefecht: itch-App, Einladung, Konto, Spielräume.">
+    <link rel="stylesheet" href="../legal.css">
+    <style>
+        .hero { position: relative; overflow: hidden; padding: 2rem 1.75rem 1.75rem; }
+        .hero::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background:
+                radial-gradient(ellipse at 85% 20%, rgba(0, 240, 255, .14), transparent 55%),
+                repeating-linear-gradient(60deg, transparent 0 22px, rgba(0, 162, 255, .05) 22px 23px),
+                repeating-linear-gradient(-60deg, transparent 0 22px, rgba(0, 162, 255, .05) 22px 23px);
+        }
+        .hero > * { position: relative; z-index: 1; }
+        .kicker { font: .72rem var(--mono); letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+        .title {
+            margin: .4rem 0 .6rem; font: 900 clamp(1.9rem, 6vw, 3rem)/1.05 'Orbitron', sans-serif; letter-spacing: 3px;
+            background: linear-gradient(180deg, #fff 0%, #dfe9ef 22%, #8fa3b0 45%, #3c4b56 50%, #b9d7e3 58%, #9ff4ff 78%, #fff 100%);
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 240, 255, .35));
+        }
+        .lead { font-size: 1.05rem; max-width: 46rem; margin: 0; }
+
+        .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; counter-reset: step; }
+        .steps li {
+            counter-increment: step; position: relative; margin: 0;
+            padding: 1rem 1.1rem 1rem 3.6rem; border-radius: 10px;
+            background: rgba(14, 30, 56, .55); border: 1px solid rgba(56, 130, 212, .3);
+        }
+        .steps li::before {
+            content: counter(step); position: absolute; left: 1rem; top: 1rem;
+            width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%;
+            font: 900 .85rem/1 'Orbitron', sans-serif; color: #030712; background: var(--cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, .55);
+        }
+        .steps h2 { margin: 0 0 .25rem; font-size: 1.05rem; }
+        .steps p { margin: 0; }
+        .steps p + p { margin-top: .4rem; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: .4rem; margin-top: .55rem;
+            padding: .55rem 1.1rem; border-radius: 9999px; text-decoration: none;
+            font: 600 .78rem/1 var(--font); letter-spacing: .8px; color: #fff;
+            background: linear-gradient(180deg, #008ba3, #004b59); border: 1px solid var(--cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, .3), inset 0 1px 0 rgba(255, 255, 255, .35);
+        }
+        .btn:hover { box-shadow: 0 0 16px rgba(0, 240, 255, .6); }
+        .btn.alt { background: linear-gradient(180deg, #1e528e, #0c2b52); border-color: #3882d4; box-shadow: none; }
+
+        .hint {
+            margin-top: .55rem; padding: .55rem .8rem; border-radius: 8px; font-size: .9rem;
+            background: rgba(255, 176, 32, .08); border: 1px solid rgba(255, 176, 32, .4); color: #ffe2a8;
+        }
+        .tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: .9rem; }
+        .tip { padding: 1rem 1.1rem; border-radius: 10px; background: rgba(14, 30, 56, .45); border: 1px solid rgba(56, 130, 212, .25); }
+        .tip h2 { margin: 0 0 .3rem; font-size: 1rem; color: var(--cyan); }
+        .tip p { margin: 0; font-size: .93rem; }
+        kbd { font: .8em var(--mono); padding: .05rem .35rem; border-radius: 4px; border: 1px solid rgba(138, 180, 248, .5); color: #fff; }
+        .sign { margin: 0; font-size: 1.02rem; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header class="top">
+        <a class="brand" href="../">LINCOLNSOFT</a>
+        <span class="kicker">Testprogramm · Prototyp</span>
+    </header>
+
+    <main>
+        <section class="panel hero">
+            <div class="kicker">Einladung für Tester</div>
+            <div class="title">STEELRUMBLE</div>
+            <p class="lead">
+                Taktisches Mech-Gefecht auf Hexfeldern – rundenbasiert wie am Spieltisch. Schön, dass du mittestest!
+                In fünf Schritten bist du im ersten Gefecht.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h1>So kommst du ins Spiel</h1>
+            <ol class="steps">
+                <li>
+                    <h2>itch-App installieren</h2>
+                    <p>Lade die kostenlose itch-App und melde dich mit deinem itch.io-Konto an – oder leg dir kostenlos eins an.</p>
+                    <a class="btn" href="https://itch.io/app" target="_blank" rel="noopener">ITCH-APP HOLEN ↗</a>
+                </li>
+                <li>
+                    <h2>Einladung öffnen</h2>
+                    <p>Öffne den persönlichen Einladungslink, den du von mir bekommen hast. Steelrumble erscheint dann in der
+                        itch-App unter <b>Bibliothek</b> – dort auf <b>Installieren</b> und danach auf <b>Starten</b> klicken.</p>
+                    <p class="muted">Updates lädt die App künftig von selbst.</p>
+                </li>
+                <li>
+                    <h2>Windows-Warnung bestätigen</h2>
+                    <p>Beim ersten Start meldet Windows eventuell „Der Computer wurde durch Windows geschützt“, weil das Spiel
+                        nicht signiert ist. Klicke auf <b>Weitere Informationen</b> → <b>Trotzdem ausführen</b>.</p>
+                </li>
+                <li>
+                    <h2>Konto anlegen</h2>
+                    <p>Im Spiel auf <b>Online spielen</b> klicken, Spielername und Passwort frei wählen, dann <b>Registrieren</b>.</p>
+                    <div class="hint">Ich schalte dich danach frei – bis dahin meldet das Spiel „wartet auf Freigabe“.
+                        Gib mir kurz Bescheid, wenn du dich registriert hast.</div>
+                </li>
+                <li>
+                    <h2>Ab ins Gefecht</h2>
+                    <p>Nach der Freigabe: <b>Online spielen</b> → einen der <b>4 Spielräume</b> wählen → in der Lobby dein Team
+                        aussuchen. Wer zuerst im Raum ist, stellt das Gefecht ein und startet es. Teams ohne Spieler übernehmen Bots.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="panel">
+            <h1>Gut zu wissen</h1>
+            <div class="tips">
+                <div class="tip">
+                    <h2>Anleitung</h2>
+                    <p>Steuerung, Regeln und alle Mechs stehen im PDF im Spielordner – in der itch-App über „…“ →
+                        „Ordner öffnen“.</p>
+                </div>
+                <div class="tip">
+                    <h2>Zum Reinkommen</h2>
+                    <p><b>Solo gegen Bots</b> oder den <b>Sandkasten</b> ausprobieren – dafür brauchst du kein Konto.</p>
+                </div>
+                <div class="tip">
+                    <h2>Eigene Mechs</h2>
+                    <p>Im <b>Mech-Hangar</b> bauen und über „Ins Vorschlagsboard“ einreichen – gute Ideen kommen ins Spiel.</p>
+                </div>
+                <div class="tip">
+                    <h2>Ohne Installation</h2>
+                    <p>Läuft auch im Browser (Chrome, Edge, Firefox am PC), mit demselben Konto.</p>
+                    <a class="btn alt" href="./" target="_blank" rel="noopener">IM BROWSER SPIELEN ↗</a>
+                </div>
+            </div>
+            <p class="muted" style="margin-top:1rem">Steuerung kurz: rechte Maustaste dreht die Kamera, Mausrad zoomt,
+                <kbd>Tab</kbd> wechselt den Mech, <kbd>Strg</kbd>+<kbd>Z</kbd> nimmt einen Schritt zurück, <kbd>F11</kbd> Vollbild.</p>
+        </section>
+
+        <section class="panel">
+            <h1>Feedback</h1>
+            <p>Alles ist noch ein Prototyp: Werte sind nicht ausbalanciert, und es kann Fehler geben. Schreib mir einfach,
+                was dir auffällt, was Spaß macht und was nervt.</p>
+            <p class="sign"><b>Viel Spaß im Gefecht!</b></p>
+        </section>
+    </main>
+
+    <footer>
+        <span>© 2026 LINCOLNSOFT</span>
+        <span><a href="../impressum.html">IMPRESSUM</a><a href="../datenschutz.html">DATENSCHUTZ</a></span>
+    </footer>
+</div>
+</body>
+</html>
